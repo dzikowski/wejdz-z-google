@@ -11,7 +11,7 @@ Kiedy klikniesz na ten obrazek, automatycznie przejdziesz na stronę Google,
 a potem z powrotem na poprzednią stronę. Strona ta jednak, będzie "myślała", 
 że wszedłeś na nią z Google (zresztą zgodnie z rzeczywistością).
 
-Do czego możesz to wykorzystać? [Sprawdź!](https://chrome.google.com/webstore/detail/kdfmannbafpkabedemabbobjnpckmkka/publish-accepted).
+Do czego możesz to wykorzystać? [Sprawdź!](https://chrome.google.com/webstore/detail/kdfmannbafpkabedemabbobjnpckmkka/publish-accepted)
 -----------------------------------------------------
 
 Poniżej jeszcze dodatkowe wyjaśnienia dla informatyków:
