@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Wejdź z Google",
+  "description": "Wtyczka pozwala na wchodzenie na dowolną stronę z wyszukiwarki Google.",
+  "version": "1.0",
+
+  "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
+  
+  "background": {
+    "scripts": ["background.js"]
+  },
+  
+  "browser_action": {
+    "default_icon": "icon16.png"
+  },
+  
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
