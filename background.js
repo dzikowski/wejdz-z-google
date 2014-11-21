@@ -16,8 +16,9 @@ function listen( tabId, url ) {
             if ( tab.status === 'complete' ) {
                 console.log('Completed ' + tab.url + ' rdir to ' + url);
                 chrome.tabs.executeScript(tab.id, { 
-                    code: 'if ( document.URL.indexOf( "' + url + '" ) >= 0 ) window.open( "' + url + '", "_self");' 
+                    code: 'if ( document.URL !== "' + url + '" ) window.open( "' + url + '", "_self");' 
                 } );
+                limit = 0;
             }
             if ( limit > 0 ) {
                 limit = limit - 1;
