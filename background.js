@@ -1,13 +1,27 @@
 
-chrome.browserAction.onClicked.addListener( function(tab) {
-    var google = 'https://www.google.pl/#q=' + encodeURIComponent( tab.url )
-    console.log( 'Opening ' + google );
-    chrome.tabs.executeScript(tab.id, { 
-        code: 'window.open( "' + google + '", "_self");'
-    } );
-    listen( tab.id, tab.url );
+// button clicked
+chrome.browserAction.onClicked.addListener( function( tab ) { 
+    openGoogle( tab.id, tab.url );
 } );
 
+// context menu
+chrome.contextMenus.create( { 
+    "title": "Wejdź z Google", 
+    "contexts": ["link"], 
+    "onclick": function( info, tab ) {
+        if ( info.linkUrl ) {
+            openGoogle( tab.id, info.linkUrl );
+        }
+} } );
+
+function openGoogle( tabId, url ) {
+    var google = 'https://www.google.pl/#q=' + encodeURIComponent( url )
+    console.log( 'Opening ' + google );
+    chrome.tabs.executeScript(tabId, { 
+        code: 'window.open( "' + google + '", "_self");'
+    } );
+    listen( tabId, url );
+}
 
 function listen( tabId, url ) {
     var limit = 100;

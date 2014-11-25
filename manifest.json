@@ -3,7 +3,7 @@
 
   "name": "Wejdź z Google",
   "description": "Wtyczka pozwala na wchodzenie na dowolną stronę z wyszukiwarki Google.",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "icons": { "16": "icon16.png", "48": "icon48.png", "128": "icon128.png" },
   
@@ -17,6 +17,7 @@
   
   "permissions": [
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "contextMenus"
   ]
 }
