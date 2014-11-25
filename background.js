@@ -6,7 +6,7 @@ chrome.browserAction.onClicked.addListener( function( tab ) {
 
 // context menu
 chrome.contextMenus.create( { 
-    "title": "Wejdź z Google", 
+    "title": chrome.i18n.getMessage( "extName" ), 
     "contexts": ["link"], 
     "onclick": function( info, tab ) {
         if ( info.linkUrl ) {
